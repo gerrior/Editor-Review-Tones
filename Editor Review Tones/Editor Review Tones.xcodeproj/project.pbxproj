@@ -99,13 +99,9 @@
 		92A0DA50247DD87E00ABF6F8 /* Editor Review Tones */ = {
 			isa = PBXGroup;
 			children = (
-				92A0DA51247DD87E00ABF6F8 /* AppDelegate.swift */,
-				92A0DA53247DD87E00ABF6F8 /* SceneDelegate.swift */,
+				92A0DA82247DD90600ABF6F8 /* Resources */,
+				92A0DA81247DD8EF00ABF6F8 /* Storyboards */,
 				92A0DA55247DD87E00ABF6F8 /* ViewController.swift */,
-				92A0DA57247DD87E00ABF6F8 /* Main.storyboard */,
-				92A0DA5A247DD88300ABF6F8 /* Assets.xcassets */,
-				92A0DA5C247DD88300ABF6F8 /* LaunchScreen.storyboard */,
-				92A0DA5F247DD88300ABF6F8 /* Info.plist */,
 			);
 			path = "Editor Review Tones";
 			sourceTree = "<group>";
@@ -126,6 +122,26 @@
 				92A0DA75247DD88300ABF6F8 /* Info.plist */,
 			);
 			path = "Editor Review TonesUITests";
+			sourceTree = "<group>";
+		};
+		92A0DA81247DD8EF00ABF6F8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				92A0DA5C247DD88300ABF6F8 /* LaunchScreen.storyboard */,
+				92A0DA57247DD87E00ABF6F8 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		92A0DA82247DD90600ABF6F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92A0DA51247DD87E00ABF6F8 /* AppDelegate.swift */,
+				92A0DA5A247DD88300ABF6F8 /* Assets.xcassets */,
+				92A0DA5F247DD88300ABF6F8 /* Info.plist */,
+				92A0DA53247DD87E00ABF6F8 /* SceneDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZDYKHFRDV;
-				INFOPLIST_FILE = "Editor Review Tones/Info.plist";
+				INFOPLIST_FILE = "Editor Review Tones/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZDYKHFRDV;
-				INFOPLIST_FILE = "Editor Review Tones/Info.plist";
+				INFOPLIST_FILE = "Editor Review Tones/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
