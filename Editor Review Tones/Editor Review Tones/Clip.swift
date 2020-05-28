@@ -19,14 +19,16 @@ class Event {
 }
 
 class Clip {
-    var name: String
+    var title: String
     var startTimestamp: Date
+    var audioFile: URL?
 
     var events: [Event]?
 
-    init(name: String, startTimestamp: Date) {
-        self.name = name
+    init(title: String, startTimestamp: Date) {
+        self.title = title
         self.startTimestamp = startTimestamp
+        self.audioFile = nil
         events = nil
     }
 }
