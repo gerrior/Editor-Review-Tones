@@ -11,8 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var recordButtonOutlet: UIButton!
-    @IBOutlet weak var playButtonOutlet: UIButton!
+    @IBOutlet private weak var recordButtonOutlet: UIButton!
+    @IBOutlet private weak var playButtonOutlet: UIButton!
 
     @IBAction func recordButtonAction(_ sender: Any) {
         if audioRecorder == nil {
