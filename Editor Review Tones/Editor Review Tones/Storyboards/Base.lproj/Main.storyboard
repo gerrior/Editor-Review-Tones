@@ -24,18 +24,18 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-P5-709">
-                                <rect key="frame" x="20" y="784" width="374" height="58"/>
+                                <rect key="frame" x="20" y="820" width="374" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIx-zf-dFR">
-                                        <rect key="frame" x="0.0" y="0.0" width="173" height="58"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Button" image="list.bullet" catalog="system"/>
                                         <connections>
                                             <segue destination="3Wa-ai-lYl" kind="show" id="Dpc-Mb-2vc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re7-Tu-mZ3">
-                                        <rect key="frame" x="183" y="36" width="51" height="22"/>
+                                        <rect key="frame" x="183" y="0.0" width="51" height="22"/>
                                         <state key="normal" title="Rec" image="mic.circle.fill" catalog="system"/>
                                         <state key="disabled" image="stop.circle.fill" catalog="system"/>
                                         <connections>
@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYY-5E-js2">
-                                        <rect key="frame" x="244" y="36" width="49" height="22"/>
+                                        <rect key="frame" x="244" y="0.0" width="49" height="22"/>
                                         <state key="normal" title="Play" image="play.fill" catalog="system"/>
                                         <state key="disabled" image="pause.fill" catalog="system"/>
                                         <connections>
@@ -51,7 +51,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xj1-T5-5vB">
-                                        <rect key="frame" x="303" y="36" width="71" height="22"/>
+                                        <rect key="frame" x="303" y="0.0" width="71" height="22"/>
                                         <state key="normal" title="Button" image="mic.fill" catalog="system"/>
                                         <state key="disabled" image="mic.slash.fill" catalog="system"/>
                                     </button>
@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bvk-fD-5UE">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClipCell" id="bvk-fD-5UE">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bvk-fD-5UE" id="eQ3-8f-krw">
