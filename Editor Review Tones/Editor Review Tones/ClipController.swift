@@ -21,10 +21,22 @@ class ClipController {
     // MARK: CRUD
 
     // Create
-    func create(title: String,
+    func create(eventWithName name: String,
+                clip: Clip,
+                timestamp: Date = Date()) {
+
+        Event(name: name,
+              timestamp: timestamp,
+              clip: clip,
+              context: CoreDataStack.shared.mainContext)
+
+        saveToPersistentStore()
+    }
+
+    func create(clipWithTitle title: String,
                 startTimestamp: Date?,
                 audioFile: URL?,
-                events: [Event]?) {
+                events: Event) {
 
         var datetime = Date()
         if startTimestamp != nil {
