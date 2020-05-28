@@ -148,12 +148,9 @@
 		92A0DA50247DD87E00ABF6F8 /* Editor Review Tones */ = {
 			isa = PBXGroup;
 			children = (
-				92A0DA9C248044C000ABF6F8 /* Clip.xcdatamodeld */,
 				92A0DAA32480481D00ABF6F8 /* ClipController.swift */,
-				92A0DAA12480471300ABF6F8 /* Clip+Convenience.swift */,
-				92A0DAA524804E5200ABF6F8 /* Event+Convenience.swift */,
 				92A0DA85247F456F00ABF6F8 /* Clips */,
-				92A0DA9A24803C7400ABF6F8 /* CoreDataStack.swift */,
+				92A0DAA72480533A00ABF6F8 /* Models */,
 				92A0DA82247DD90600ABF6F8 /* Resources */,
 				92A0DA81247DD8EF00ABF6F8 /* Storyboards */,
 				92A0DA55247DD87E00ABF6F8 /* ViewController.swift */,
@@ -210,6 +207,17 @@
 				92A0DA83247F39D700ABF6F8 /* wrong-number.mp3 */,
 			);
 			path = Clips;
+			sourceTree = "<group>";
+		};
+		92A0DAA72480533A00ABF6F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92A0DA9C248044C000ABF6F8 /* Clip.xcdatamodeld */,
+				92A0DAA12480471300ABF6F8 /* Clip+Convenience.swift */,
+				92A0DA9A24803C7400ABF6F8 /* CoreDataStack.swift */,
+				92A0DAA524804E5200ABF6F8 /* Event+Convenience.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A13EE3FB7BC7B478E63153CD /* Pods */ = {
