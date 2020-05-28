@@ -15,6 +15,12 @@
 		92A0DA5E247DD88300ABF6F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA5C247DD88300ABF6F8 /* LaunchScreen.storyboard */; };
 		92A0DA69247DD88300ABF6F8 /* Editor_Review_TonesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DA68247DD88300ABF6F8 /* Editor_Review_TonesTests.swift */; };
 		92A0DA74247DD88300ABF6F8 /* Editor_Review_TonesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DA73247DD88300ABF6F8 /* Editor_Review_TonesUITests.swift */; };
+		92A0DA84247F39D700ABF6F8 /* wrong-number.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA83247F39D700ABF6F8 /* wrong-number.mp3 */; };
+		92A0DA87247F45C300ABF6F8 /* gong-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA86247F45C300ABF6F8 /* gong-sound.wav */; };
+		92A0DA89247F46A900ABF6F8 /* e-note.short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA88247F46A900ABF6F8 /* e-note.short.wav */; };
+		92A0DA8B247F471B00ABF6F8 /* bike-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA8A247F471B00ABF6F8 /* bike-bell.mp3 */; };
+		92A0DA8D247F476800ABF6F8 /* ring-tone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA8C247F476800ABF6F8 /* ring-tone.mp3 */; };
+		92A0DA8F247F478A00ABF6F8 /* rooster.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA8E247F478A00ABF6F8 /* rooster.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		92A0DA6F247DD88300ABF6F8 /* Editor Review TonesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Editor Review TonesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A0DA73247DD88300ABF6F8 /* Editor_Review_TonesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor_Review_TonesUITests.swift; sourceTree = "<group>"; };
 		92A0DA75247DD88300ABF6F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A0DA83247F39D700ABF6F8 /* wrong-number.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "wrong-number.mp3"; sourceTree = "<group>"; };
+		92A0DA86247F45C300ABF6F8 /* gong-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "gong-sound.wav"; sourceTree = "<group>"; };
+		92A0DA88247F46A900ABF6F8 /* e-note.short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "e-note.short.wav"; sourceTree = "<group>"; };
+		92A0DA8A247F471B00ABF6F8 /* bike-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bike-bell.mp3"; sourceTree = "<group>"; };
+		92A0DA8C247F476800ABF6F8 /* ring-tone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ring-tone.mp3"; sourceTree = "<group>"; };
+		92A0DA8E247F478A00ABF6F8 /* rooster.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rooster.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,7 @@
 		92A0DA50247DD87E00ABF6F8 /* Editor Review Tones */ = {
 			isa = PBXGroup;
 			children = (
+				92A0DA85247F456F00ABF6F8 /* Clips */,
 				92A0DA82247DD90600ABF6F8 /* Resources */,
 				92A0DA81247DD8EF00ABF6F8 /* Storyboards */,
 				92A0DA55247DD87E00ABF6F8 /* ViewController.swift */,
@@ -142,6 +155,19 @@
 				92A0DA53247DD87E00ABF6F8 /* SceneDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		92A0DA85247F456F00ABF6F8 /* Clips */ = {
+			isa = PBXGroup;
+			children = (
+				92A0DA8A247F471B00ABF6F8 /* bike-bell.mp3 */,
+				92A0DA88247F46A900ABF6F8 /* e-note.short.wav */,
+				92A0DA86247F45C300ABF6F8 /* gong-sound.wav */,
+				92A0DA8C247F476800ABF6F8 /* ring-tone.mp3 */,
+				92A0DA8E247F478A00ABF6F8 /* rooster.mp3 */,
+				92A0DA83247F39D700ABF6F8 /* wrong-number.mp3 */,
+			);
+			path = Clips;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +274,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A0DA89247F46A900ABF6F8 /* e-note.short.wav in Resources */,
+				92A0DA8B247F471B00ABF6F8 /* bike-bell.mp3 in Resources */,
 				92A0DA5E247DD88300ABF6F8 /* LaunchScreen.storyboard in Resources */,
+				92A0DA87247F45C300ABF6F8 /* gong-sound.wav in Resources */,
+				92A0DA8F247F478A00ABF6F8 /* rooster.mp3 in Resources */,
+				92A0DA84247F39D700ABF6F8 /* wrong-number.mp3 in Resources */,
 				92A0DA5B247DD88300ABF6F8 /* Assets.xcassets in Resources */,
+				92A0DA8D247F476800ABF6F8 /* ring-tone.mp3 in Resources */,
 				92A0DA59247DD87E00ABF6F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
