@@ -12,11 +12,13 @@ import CoreData
 extension Event {
     @discardableResult convenience init(name: String,
                                         timestamp: Date,
+                                        clip: Clip,
                                         context: NSManagedObjectContext) {
 
         self.init(context: context)
 
         self.name = name
         self.timestamp = timestamp
+        self.clip = clip
     }
 }
