@@ -11,9 +11,9 @@ import CoreData
 
 extension Clip {
     @discardableResult convenience init(title: String,
-                     startTimestamp: Date,
-                     audioFile: URL?,
-                     context: NSManagedObjectContext) {
+                                        startTimestamp: Date,
+                                        audioFile: URL?,
+                                        context: NSManagedObjectContext) {
         // Magic happens here
         self.init(context: context)
 
