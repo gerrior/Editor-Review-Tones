@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func clipButton(_ sender: Any) {
+        print("Timestamp")
     }
 
     var recordButton: UIButton!
@@ -98,7 +99,7 @@ class ViewController: UIViewController {
         recordButton.setTitle("Tap to Record", for: .normal)
         recordButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
         recordButton.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
-        view.addSubview(recordButton)
+// FIXME:        view.addSubview(recordButton)
     }
 
     func getDocumentsDirectory() -> URL {

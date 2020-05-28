@@ -10,16 +10,15 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Editor_Review_Tones" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Review_Tones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-IH-bnh">
-                                <rect key="frame" x="78" y="81" width="52" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-IH-bnh">
+                                <rect key="frame" x="181" y="413" width="52" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <state key="normal" title="💩"/>
+                                <state key="normal" title="🤬"/>
                                 <connections>
                                     <action selector="clipButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuN-r6-zXl"/>
                                 </connections>
@@ -62,6 +61,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f0J-P5-709" secondAttribute="trailing" constant="20" id="8gc-41-dXT"/>
+                            <constraint firstItem="xgP-IH-bnh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8t2-tR-HVz"/>
+                            <constraint firstItem="xgP-IH-bnh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FoY-Bh-ity"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f0J-P5-709" secondAttribute="bottom" constant="20" id="Mdl-TM-isN"/>
                             <constraint firstItem="f0J-P5-709" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bSV-1i-tCP"/>
                         </constraints>
