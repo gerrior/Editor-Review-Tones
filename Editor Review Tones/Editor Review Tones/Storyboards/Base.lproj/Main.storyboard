@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rf8-3R-OXj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,48 +15,130 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re7-Tu-mZ3">
-                                <rect key="frame" x="20" y="812" width="30" height="30"/>
-                                <state key="normal" title="Rec"/>
-                                <connections>
-                                    <action selector="recordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vjy-3d-nYq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYY-5E-js2">
-                                <rect key="frame" x="70" y="812" width="30" height="30"/>
-                                <state key="normal" title="Play"/>
-                                <connections>
-                                    <action selector="playButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHt-mn-qb1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-IH-bnh">
-                                <rect key="frame" x="342" y="64" width="52" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-IH-bnh">
+                                <rect key="frame" x="78" y="81" width="52" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <state key="normal" title="💩"/>
                                 <connections>
                                     <action selector="clipButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuN-r6-zXl"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-P5-709">
+                                <rect key="frame" x="20" y="784" width="374" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIx-zf-dFR">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <state key="normal" title="Button" image="list.bullet" catalog="system"/>
+                                        <connections>
+                                            <segue destination="3Wa-ai-lYl" kind="show" id="Dpc-Mb-2vc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re7-Tu-mZ3">
+                                        <rect key="frame" x="183" y="36" width="51" height="22"/>
+                                        <state key="normal" title="Rec" image="mic.circle.fill" catalog="system"/>
+                                        <state key="disabled" image="stop.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="recordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vjy-3d-nYq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYY-5E-js2">
+                                        <rect key="frame" x="244" y="36" width="49" height="22"/>
+                                        <state key="normal" title="Play" image="play.fill" catalog="system"/>
+                                        <state key="disabled" image="pause.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHt-mn-qb1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xj1-T5-5vB">
+                                        <rect key="frame" x="303" y="36" width="71" height="22"/>
+                                        <state key="normal" title="Button" image="mic.fill" catalog="system"/>
+                                        <state key="disabled" image="mic.slash.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xgP-IH-bnh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5t2-RK-Dyt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xgP-IH-bnh" secondAttribute="trailing" constant="20" id="E1y-jD-yaD"/>
-                            <constraint firstItem="WYY-5E-js2" firstAttribute="leading" secondItem="Re7-Tu-mZ3" secondAttribute="trailing" constant="20" id="LKc-pU-keX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Re7-Tu-mZ3" secondAttribute="bottom" constant="20" id="V4Z-qR-Cce"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WYY-5E-js2" secondAttribute="bottom" constant="20" id="kUS-au-aNB"/>
-                            <constraint firstItem="Re7-Tu-mZ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uXv-ms-nT8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f0J-P5-709" secondAttribute="trailing" constant="20" id="8gc-41-dXT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f0J-P5-709" secondAttribute="bottom" constant="20" id="Mdl-TM-isN"/>
+                            <constraint firstItem="f0J-P5-709" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bSV-1i-tCP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OR0-NC-3Fa"/>
                     <connections>
-                        <outlet property="playButtonOutlet" destination="WYY-5E-js2" id="6YE-V8-cXk"/>
-                        <outlet property="recordButtonOutlet" destination="Re7-Tu-mZ3" id="aS0-cT-N19"/>
+                        <outlet property="listButtonLabel" destination="QIx-zf-dFR" id="Unv-lT-CkK"/>
+                        <outlet property="micButtonLabel" destination="xj1-T5-5vB" id="mYj-DN-fVt"/>
+                        <outlet property="playButtonLabel" destination="WYY-5E-js2" id="6YE-V8-cXk"/>
+                        <outlet property="recordButtonLabel" destination="Re7-Tu-mZ3" id="aS0-cT-N19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="FcJ-9i-Hhf">
+            <objects>
+                <tableViewController id="3Wa-ai-lYl" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6go-8O-3Nx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bvk-fD-5UE">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bvk-fD-5UE" id="eQ3-8f-krw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Wa-ai-lYl" id="qgp-Bz-9Af"/>
+                            <outlet property="delegate" destination="3Wa-ai-lYl" id="y9q-mw-wwC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9O4-PA-D2f">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="jFa-tm-DFe"/>
+                            <barButtonItem systemItem="trash" id="c3a-BL-Jf9"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6u-54-uQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eR0-qB-cqj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rf8-3R-OXj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YXa-VG-asj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aGg-OD-rDP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ndr-B0-87J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="mic.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="mic.fill" catalog="system" width="108" height="128"/>
+        <image name="mic.slash.fill" catalog="system" width="112" height="128"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

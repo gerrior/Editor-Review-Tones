@@ -11,8 +11,10 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var recordButtonOutlet: UIButton!
-    @IBOutlet private weak var playButtonOutlet: UIButton!
+    @IBOutlet private weak var listButtonLabel: UIButton!
+    @IBOutlet private weak var recordButtonLabel: UIButton!
+    @IBOutlet private weak var playButtonLabel: UIButton!
+    @IBOutlet private weak var micButtonLabel: UIButton!
 
     @IBAction func recordButtonAction(_ sender: Any) {
         if audioRecorder == nil {
@@ -57,6 +59,37 @@ class ViewController: UIViewController {
         } catch {
             print("Catch: failed to record!")
         }
+
+        // List Button: Increase size
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 24, weight: .regular, scale: .large)
+        var largeImage = UIImage(systemName: "list.bullet", withConfiguration: largeConfig)
+        listButtonLabel.setImage(largeImage, for: .normal)
+
+        // Record Button:
+        largeImage = UIImage(systemName: "mic.circle.fill", withConfiguration: largeConfig)
+        recordButtonLabel.setImage(largeImage, for: .normal)
+
+        largeImage = UIImage(systemName: "stop.circle.fill", withConfiguration: largeConfig)
+        recordButtonLabel.setImage(largeImage, for: .selected)
+
+        // Play Button:
+        largeImage = UIImage(systemName: "play.fill", withConfiguration: largeConfig)
+        playButtonLabel.setImage(largeImage, for: .normal)
+
+        largeImage = UIImage(systemName: "pause.fill", withConfiguration: largeConfig)
+        playButtonLabel.setImage(largeImage, for: .selected)
+
+
+        // Mic Button:
+        largeImage = UIImage(systemName: "mic.fill", withConfiguration: largeConfig)
+        micButtonLabel.setImage(largeImage, for: .normal)
+
+        largeImage = UIImage(systemName: "mic.slash.fill", withConfiguration: largeConfig)
+        micButtonLabel.setImage(largeImage, for: .selected)
+
+        // Mic button initially disabled
+        micButtonLabel.isEnabled = false
+
     }
 
     func loadRecordingUI() {
@@ -88,7 +121,7 @@ class ViewController: UIViewController {
             audioRecorder.delegate = self
             audioRecorder.record()
 
-            recordButtonOutlet.setTitle("Tap to Stop", for: .normal)
+            recordButtonLabel.setTitle("Tap to Stop", for: .normal)
             recordButton.setTitle("Tap to Stop", for: .normal)
         } catch {
             finishRecording(success: false)
@@ -131,10 +164,10 @@ extension ViewController: AVAudioRecorderDelegate {
         audioRecorder = nil
 
         if success {
-            recordButtonOutlet.setTitle("Tap to Re-record", for: .normal)
+            recordButtonLabel.setTitle("Tap to Re-record", for: .normal)
             recordButton.setTitle("Tap to Re-record", for: .normal)
         } else {
-            recordButtonOutlet.setTitle("Tap to Record", for: .normal)
+            recordButtonLabel.setTitle("Tap to Record", for: .normal)
             recordButton.setTitle("Tap to Record", for: .normal)
             // recording failed :(
         }
