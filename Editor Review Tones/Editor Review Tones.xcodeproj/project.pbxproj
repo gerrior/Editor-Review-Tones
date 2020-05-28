@@ -50,7 +50,7 @@
 		8569F447CB16CCF73236A047 /* Pods-Editor Review Tones.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor Review Tones.debug.xcconfig"; path = "Target Support Files/Pods-Editor Review Tones/Pods-Editor Review Tones.debug.xcconfig"; sourceTree = "<group>"; };
 		87F91142D4FCAE9CF80BE927 /* Pods-Editor Review TonesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor Review TonesTests.debug.xcconfig"; path = "Target Support Files/Pods-Editor Review TonesTests/Pods-Editor Review TonesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A4B1331AB345D1B3EE71DB1 /* Pods_Editor_Review_Tones.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Editor_Review_Tones.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92A0DA4E247DD87E00ABF6F8 /* Editor Review Tones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Editor Review Tones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A0DA4E247DD87E00ABF6F8 /* Review Tones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Review Tones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A0DA51247DD87E00ABF6F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A0DA53247DD87E00ABF6F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		92A0DA55247DD87E00ABF6F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		92A0DA4F247DD87E00ABF6F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92A0DA4E247DD87E00ABF6F8 /* Editor Review Tones.app */,
+				92A0DA4E247DD87E00ABF6F8 /* Review Tones.app */,
 				92A0DA64247DD88300ABF6F8 /* Editor Review TonesTests.xctest */,
 				92A0DA6F247DD88300ABF6F8 /* Editor Review TonesUITests.xctest */,
 			);
@@ -229,7 +229,7 @@
 			);
 			name = "Editor Review Tones";
 			productName = "Editor Review Tones";
-			productReference = 92A0DA4E247DD87E00ABF6F8 /* Editor Review Tones.app */;
+			productReference = 92A0DA4E247DD87E00ABF6F8 /* Review Tones.app */;
 			productType = "com.apple.product-type.application";
 		};
 		92A0DA63247DD88300ABF6F8 /* Editor Review TonesTests */ = {
@@ -621,7 +621,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.olivejuice.Editor-Review-Tones";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Review Tones";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -640,7 +640,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.olivejuice.Editor-Review-Tones";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Review Tones";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
