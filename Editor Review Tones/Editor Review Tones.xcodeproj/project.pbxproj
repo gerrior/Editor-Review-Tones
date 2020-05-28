@@ -23,8 +23,9 @@
 		92A0DA8B247F471B00ABF6F8 /* bike-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA8A247F471B00ABF6F8 /* bike-bell.mp3 */; };
 		92A0DA8D247F476800ABF6F8 /* ring-tone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA8C247F476800ABF6F8 /* ring-tone.mp3 */; };
 		92A0DA8F247F478A00ABF6F8 /* rooster.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA8E247F478A00ABF6F8 /* rooster.mp3 */; };
-		92A0DA92248030C800ABF6F8 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DA91248030C800ABF6F8 /* Clip.swift */; };
 		92A0DA9B24803C7400ABF6F8 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DA9A24803C7400ABF6F8 /* CoreDataStack.swift */; };
+		92A0DA9E248044C000ABF6F8 /* Clip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DA9C248044C000ABF6F8 /* Clip.xcdatamodeld */; };
+		92A0DAA22480471300ABF6F8 /* Clip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA12480471300ABF6F8 /* Clip+Convenience.swift */; };
 		D4792627ED589EA817012B4F /* Pods_Editor_Review_TonesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3FE967D489FFEF42A2377C /* Pods_Editor_Review_TonesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,8 +73,9 @@
 		92A0DA8A247F471B00ABF6F8 /* bike-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bike-bell.mp3"; sourceTree = "<group>"; };
 		92A0DA8C247F476800ABF6F8 /* ring-tone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ring-tone.mp3"; sourceTree = "<group>"; };
 		92A0DA8E247F478A00ABF6F8 /* rooster.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rooster.mp3; sourceTree = "<group>"; };
-		92A0DA91248030C800ABF6F8 /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		92A0DA9A24803C7400ABF6F8 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		92A0DA9D248044C000ABF6F8 /* Clip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Clip.xcdatamodel; sourceTree = "<group>"; };
+		92A0DAA12480471300ABF6F8 /* Clip+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clip+Convenience.swift"; sourceTree = "<group>"; };
 		AC3F5827391ABD181A55AF48 /* Pods-Editor Review Tones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor Review Tones.release.xcconfig"; path = "Target Support Files/Pods-Editor Review Tones/Pods-Editor Review Tones.release.xcconfig"; sourceTree = "<group>"; };
 		BBCD68F7BE5C4929F4375C81 /* Pods-Editor Review TonesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor Review TonesTests.release.xcconfig"; path = "Target Support Files/Pods-Editor Review TonesTests/Pods-Editor Review TonesTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF3FE967D489FFEF42A2377C /* Pods_Editor_Review_TonesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Editor_Review_TonesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +144,8 @@
 		92A0DA50247DD87E00ABF6F8 /* Editor Review Tones */ = {
 			isa = PBXGroup;
 			children = (
-				92A0DA91248030C800ABF6F8 /* Clip.swift */,
+				92A0DA9C248044C000ABF6F8 /* Clip.xcdatamodeld */,
+				92A0DAA12480471300ABF6F8 /* Clip+Convenience.swift */,
 				92A0DA85247F456F00ABF6F8 /* Clips */,
 				92A0DA9A24803C7400ABF6F8 /* CoreDataStack.swift */,
 				92A0DA82247DD90600ABF6F8 /* Resources */,
@@ -445,9 +448,10 @@
 			files = (
 				92A0DA9B24803C7400ABF6F8 /* CoreDataStack.swift in Sources */,
 				92A0DA56247DD87E00ABF6F8 /* ViewController.swift in Sources */,
-				92A0DA92248030C800ABF6F8 /* Clip.swift in Sources */,
 				92A0DA52247DD87E00ABF6F8 /* AppDelegate.swift in Sources */,
 				92A0DA54247DD87E00ABF6F8 /* SceneDelegate.swift in Sources */,
+				92A0DA9E248044C000ABF6F8 /* Clip.xcdatamodeld in Sources */,
+				92A0DAA22480471300ABF6F8 /* Clip+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +788,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		92A0DA9C248044C000ABF6F8 /* Clip.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				92A0DA9D248044C000ABF6F8 /* Clip.xcdatamodel */,
+			);
+			currentVersion = 92A0DA9D248044C000ABF6F8 /* Clip.xcdatamodel */;
+			path = Clip.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 92A0DA46247DD87E00ABF6F8 /* Project object */;
 }
