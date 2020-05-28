@@ -4,13 +4,15 @@
         <attribute name="audioFile" optional="YES" attributeType="URI"/>
         <attribute name="startTimestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="clip" inverseEntity="Event"/>
     </entity>
     <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Clip" inverseName="events" inverseEntity="Clip"/>
     </entity>
     <elements>
-        <element name="Clip" positionX="-45" positionY="0" width="128" height="88"/>
-        <element name="Event" positionX="-9" positionY="63" width="128" height="73"/>
+        <element name="Clip" positionX="-45" positionY="0" width="128" height="103"/>
+        <element name="Event" positionX="-9" positionY="63" width="128" height="88"/>
     </elements>
 </model>
