@@ -1,5 +1,5 @@
 //
-//  Editor_Review_TonesTests.swift
+//  EditorReviewTonesTests.swift
 //  Editor Review TonesTests
 //
 //  Created by Mark Gerrior on 5/26/20.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import Editor_Review_Tones
 
-class Editor_Review_TonesTests: XCTestCase {
+class EditorReviewTonesTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
