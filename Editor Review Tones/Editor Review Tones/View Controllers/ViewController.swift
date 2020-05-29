@@ -11,17 +11,17 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    // MARK: Properties
+
+    let clipController = ClipController()
+
     @IBOutlet private weak var listButtonLabel: UIButton!
     @IBOutlet private weak var recordButtonLabel: UIButton!
     @IBOutlet private weak var playButtonLabel: UIButton!
     @IBOutlet private weak var micButtonLabel: UIButton!
 
     @IBAction func recordButtonAction(_ sender: Any) {
-        if audioRecorder == nil {
-            startRecording()
-        } else {
-            finishRecording(success: true)
-        }
+        recordTapped()
     }
 
     @IBAction func playButtonAction(_ sender: Any) {
@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         print("Timestamp")
     }
 
-    var recordButton: UIButton!
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer?
@@ -60,14 +59,17 @@ class ViewController: UIViewController {
         } catch {
             print("Catch: failed to record!")
         }
+    }
 
+    func loadRecordingUI() {
         // List Button: Increase size
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 24, weight: .regular, scale: .large)
         var largeImage = UIImage(systemName: "list.bullet", withConfiguration: largeConfig)
         listButtonLabel.setImage(largeImage, for: .normal)
 
         // Record Button:
-        largeImage = UIImage(systemName: "mic.circle.fill", withConfiguration: largeConfig)
+        largeImage = UIImage(systemName: "smallcircle.circle.fill", withConfiguration: largeConfig)
+        recordButtonLabel.tintColor = UIColor.red
         recordButtonLabel.setImage(largeImage, for: .normal)
 
         largeImage = UIImage(systemName: "stop.circle.fill", withConfiguration: largeConfig)
@@ -90,16 +92,6 @@ class ViewController: UIViewController {
 
         // Mic button initially disabled
         micButtonLabel.isEnabled = false
-
-    }
-
-    func loadRecordingUI() {
-        recordButton = UIButton(frame: CGRect(x: 64, y: 64, width: 128, height: 64))
-        recordButton.backgroundColor = .green
-        recordButton.setTitle("Tap to Record", for: .normal)
-        recordButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
-        recordButton.addTarget(self, action: #selector(recordTapped), for: .touchUpInside)
-// FIXME:        view.addSubview(recordButton)
     }
 
     func getDocumentsDirectory() -> URL {
@@ -121,9 +113,6 @@ class ViewController: UIViewController {
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             audioRecorder.delegate = self
             audioRecorder.record()
-
-            recordButtonLabel.setTitle("Tap to Stop", for: .normal)
-            recordButton.setTitle("Tap to Stop", for: .normal)
         } catch {
             finishRecording(success: false)
         }
@@ -132,14 +121,14 @@ class ViewController: UIViewController {
     func playRecording() {
         var audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
 
-        var path = Bundle.main.url(forResource: "wrong-number", withExtension: "mp3")!
-        path = Bundle.main.url(forResource: "gong-sound", withExtension: "wav")!
-        path = Bundle.main.url(forResource: "e-note.short", withExtension: "wav")!
-        path = Bundle.main.url(forResource: "bike-bell", withExtension: "mp3")!
-        path = Bundle.main.url(forResource: "ring-tone", withExtension: "mp3")!
-        path = Bundle.main.url(forResource: "rooster", withExtension: "mp3")!
-        //        audioFilename = URL(fileURLWithPath: path)
-        audioFilename = path
+//        var path = Bundle.main.url(forResource: "wrong-number", withExtension: "mp3")!
+//        path = Bundle.main.url(forResource: "gong-sound", withExtension: "wav")!
+//        path = Bundle.main.url(forResource: "e-note.short", withExtension: "wav")!
+//        path = Bundle.main.url(forResource: "bike-bell", withExtension: "mp3")!
+//        path = Bundle.main.url(forResource: "ring-tone", withExtension: "mp3")!
+//        path = Bundle.main.url(forResource: "rooster", withExtension: "mp3")!
+//        //        audioFilename = URL(fileURLWithPath: path)
+//        audioFilename = path
 
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: audioFilename)
@@ -151,9 +140,11 @@ class ViewController: UIViewController {
 
     @objc func recordTapped() {
         if audioRecorder == nil {
+            recordButtonLabel.isSelected = true
             startRecording()
         } else {
             finishRecording(success: true)
+            recordButtonLabel.isSelected = false
         }
     }
 
@@ -165,12 +156,7 @@ extension ViewController: AVAudioRecorderDelegate {
         audioRecorder = nil
 
         if success {
-            recordButtonLabel.setTitle("Tap to Re-record", for: .normal)
-            recordButton.setTitle("Tap to Re-record", for: .normal)
         } else {
-            recordButtonLabel.setTitle("Tap to Record", for: .normal)
-            recordButton.setTitle("Tap to Record", for: .normal)
-            // recording failed :(
         }
     }
 

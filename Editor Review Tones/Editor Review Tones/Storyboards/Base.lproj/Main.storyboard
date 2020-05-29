@@ -23,36 +23,36 @@
                                     <action selector="clipButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuN-r6-zXl"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-P5-709">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-P5-709">
                                 <rect key="frame" x="20" y="820" width="374" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIx-zf-dFR">
-                                        <rect key="frame" x="0.0" y="0.0" width="173" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Button" image="list.bullet" catalog="system"/>
+                                        <state key="normal" image="list.bullet" catalog="system"/>
                                         <connections>
                                             <segue destination="3Wa-ai-lYl" kind="show" id="Dpc-Mb-2vc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re7-Tu-mZ3">
-                                        <rect key="frame" x="183" y="0.0" width="51" height="22"/>
-                                        <state key="normal" title="Rec" image="mic.circle.fill" catalog="system"/>
-                                        <state key="disabled" image="stop.circle.fill" catalog="system"/>
+                                        <rect key="frame" x="96" y="0.0" width="86" height="22"/>
+                                        <state key="normal" image="smallcircle.circle.fill" catalog="system"/>
+                                        <state key="selected" image="stop.circle.fill" catalog="system"/>
                                         <connections>
                                             <action selector="recordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vjy-3d-nYq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYY-5E-js2">
-                                        <rect key="frame" x="244" y="0.0" width="49" height="22"/>
-                                        <state key="normal" title="Play" image="play.fill" catalog="system"/>
+                                        <rect key="frame" x="192" y="0.0" width="86" height="22"/>
+                                        <state key="normal" image="play.fill" catalog="system"/>
                                         <state key="disabled" image="pause.fill" catalog="system"/>
                                         <connections>
                                             <action selector="playButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHt-mn-qb1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xj1-T5-5vB">
-                                        <rect key="frame" x="303" y="0.0" width="71" height="22"/>
-                                        <state key="normal" title="Button" image="mic.fill" catalog="system"/>
+                                        <rect key="frame" x="288" y="0.0" width="86" height="22"/>
+                                        <state key="normal" image="mic.fill" catalog="system"/>
                                         <state key="disabled" image="mic.slash.fill" catalog="system"/>
                                     </button>
                                 </subviews>
@@ -83,7 +83,7 @@
         <!--Table View Controller-->
         <scene sceneID="FcJ-9i-Hhf">
             <objects>
-                <tableViewController id="3Wa-ai-lYl" sceneMemberID="viewController">
+                <tableViewController id="3Wa-ai-lYl" customClass="TableViewController" customModule="Review_Tones" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6go-8O-3Nx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,11 +135,11 @@
     </scenes>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
-        <image name="mic.circle.fill" catalog="system" width="128" height="121"/>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="mic.slash.fill" catalog="system" width="112" height="128"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="smallcircle.circle.fill" catalog="system" width="128" height="121"/>
         <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

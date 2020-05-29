@@ -28,6 +28,7 @@
 		92A0DAA22480471300ABF6F8 /* Clip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA12480471300ABF6F8 /* Clip+Convenience.swift */; };
 		92A0DAA42480481D00ABF6F8 /* ClipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA32480481D00ABF6F8 /* ClipController.swift */; };
 		92A0DAA624804E5200ABF6F8 /* Event+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA524804E5200ABF6F8 /* Event+Convenience.swift */; };
+		92A0DAA92480720F00ABF6F8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA82480720F00ABF6F8 /* TableViewController.swift */; };
 		D4792627ED589EA817012B4F /* Pods_Editor_Review_TonesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3FE967D489FFEF42A2377C /* Pods_Editor_Review_TonesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		92A0DAA12480471300ABF6F8 /* Clip+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clip+Convenience.swift"; sourceTree = "<group>"; };
 		92A0DAA32480481D00ABF6F8 /* ClipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipController.swift; sourceTree = "<group>"; };
 		92A0DAA524804E5200ABF6F8 /* Event+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+Convenience.swift"; sourceTree = "<group>"; };
+		92A0DAA82480720F00ABF6F8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AC3F5827391ABD181A55AF48 /* Pods-Editor Review Tones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor Review Tones.release.xcconfig"; path = "Target Support Files/Pods-Editor Review Tones/Pods-Editor Review Tones.release.xcconfig"; sourceTree = "<group>"; };
 		BBCD68F7BE5C4929F4375C81 /* Pods-Editor Review TonesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor Review TonesTests.release.xcconfig"; path = "Target Support Files/Pods-Editor Review TonesTests/Pods-Editor Review TonesTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF3FE967D489FFEF42A2377C /* Pods_Editor_Review_TonesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Editor_Review_TonesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +155,7 @@
 				92A0DAA72480533A00ABF6F8 /* Models */,
 				92A0DA82247DD90600ABF6F8 /* Resources */,
 				92A0DA81247DD8EF00ABF6F8 /* Storyboards */,
-				92A0DA55247DD87E00ABF6F8 /* ViewController.swift */,
+				92A0DAAA2480721600ABF6F8 /* View Controllers */,
 			);
 			path = "Editor Review Tones";
 			sourceTree = "<group>";
@@ -218,6 +220,15 @@
 				92A0DAA524804E5200ABF6F8 /* Event+Convenience.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		92A0DAAA2480721600ABF6F8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				92A0DAA82480720F00ABF6F8 /* TableViewController.swift */,
+				92A0DA55247DD87E00ABF6F8 /* ViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		A13EE3FB7BC7B478E63153CD /* Pods */ = {
@@ -467,6 +478,7 @@
 				92A0DAA624804E5200ABF6F8 /* Event+Convenience.swift in Sources */,
 				92A0DA54247DD87E00ABF6F8 /* SceneDelegate.swift in Sources */,
 				92A0DA9E248044C000ABF6F8 /* Clip.xcdatamodeld in Sources */,
+				92A0DAA92480720F00ABF6F8 /* TableViewController.swift in Sources */,
 				92A0DAA22480471300ABF6F8 /* Clip+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
