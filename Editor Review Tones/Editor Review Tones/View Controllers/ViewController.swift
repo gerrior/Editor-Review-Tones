@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     // MARK: Properties
 
     let clipController = ClipController()
+    var clip: Clip?
 
     @IBOutlet private weak var listButtonLabel: UIButton!
     @IBOutlet private weak var recordButtonLabel: UIButton!
@@ -150,7 +151,7 @@ class ViewController: UIViewController {
             df.timeStyle = .short
             let date = df.string(from: now)
 
-            clipController.create(clipWithTitle: "Clip from \(date)", startTimestamp: now, audioFile: nil)
+            clip = clipController.create(clipWithTitle: "Clip from \(date)", startTimestamp: now, audioFile: nil)
 
             recordButtonLabel.isSelected = true
             startRecording()
@@ -160,6 +161,15 @@ class ViewController: UIViewController {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ClipSegue" {
+            guard let vc = segue.destination as? TableViewController else { return }
+
+            vc.clipController = clipController
+            vc.clip = clip
+            clip = nil
+        }
+    }
 }
 
 extension ViewController: AVAudioRecorderDelegate {

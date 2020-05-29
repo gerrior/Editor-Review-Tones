@@ -35,19 +35,21 @@ class ClipController {
 
     func create(clipWithTitle title: String,
                 startTimestamp: Date?,
-                audioFile: URL?) {
+                audioFile: URL?) -> Clip {
 
         var datetime = Date()
         if startTimestamp != nil {
             datetime = startTimestamp!
         }
 
-        Clip(title: title,
-             startTimestamp: datetime,
-             audioFile: audioFile,
-             context: CoreDataStack.shared.mainContext)
+        let clip = Clip(title: title,
+                        startTimestamp: datetime,
+                        audioFile: audioFile,
+                        context: CoreDataStack.shared.mainContext)
 
         saveToPersistentStore()
+
+        return clip
     }
 
     private func saveToPersistentStore() {

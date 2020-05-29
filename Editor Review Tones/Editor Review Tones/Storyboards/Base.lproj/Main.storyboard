@@ -31,7 +31,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" image="list.bullet" catalog="system"/>
                                         <connections>
-                                            <segue destination="3Wa-ai-lYl" kind="show" id="Dpc-Mb-2vc"/>
+                                            <segue destination="3Wa-ai-lYl" kind="show" identifier="ClipSegue" id="Dpc-Mb-2vc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re7-Tu-mZ3">

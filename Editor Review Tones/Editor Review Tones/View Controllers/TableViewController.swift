@@ -12,7 +12,12 @@ class TableViewController: UITableViewController {
 
     // MARK: Properties
 
-    let clipController = ClipController()
+    var clipController: ClipController?
+    var clip: Clip? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +34,15 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        clipController.clips.count
+        clipController?.clips.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClipCell", for: indexPath)
 
-        let clip = clipController.clips[indexPath.row]
-
-        cell.textLabel?.text = clip.title
+        if let clip = clipController?.clips[indexPath.row] {
+            cell.textLabel?.text = clip.title
+        }
 
         return cell
     }
@@ -46,9 +51,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            let clip = clipController.clips[indexPath.row]
-
-            clipController.delete(clip: clip)
+            if let clip = clipController?.clips[indexPath.row] {
+                clipController?.delete(clip: clip)
+            }
 
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
