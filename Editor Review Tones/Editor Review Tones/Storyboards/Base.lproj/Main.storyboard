@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Record View Controller-->
+        <!--Editor Review Tones-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RecordViewController" customModule="Review_Tones" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,14 +15,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-IH-bnh">
-                                <rect key="frame" x="181" y="413" width="52" height="70"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <state key="normal" title="🤬"/>
-                                <connections>
-                                    <action selector="eventOneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuN-r6-zXl"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XSx-E1-k32">
+                                <rect key="frame" x="20" y="108" width="374" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Px0-8m-2Kr">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="140"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-IH-bnh">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="140"/>
+                                                <color key="backgroundColor" red="0.97647058823529409" green="0.4392156862745098" blue="0.40784313725490196" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                <state key="normal" title="🤬"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="eventButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuN-r6-zXl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-aV-mrP">
+                                                <rect key="frame" x="197" y="0.0" width="177" height="140"/>
+                                                <color key="backgroundColor" red="0.81960784313725488" green="0.83921568627450982" blue="0.27450980392156865" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                <state key="normal" title="📝"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="eventButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vss-31-09e"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Qr-6x-BeH">
+                                        <rect key="frame" x="0.0" y="160" width="374" height="140"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isv-iT-x0E">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="140"/>
+                                                <color key="backgroundColor" red="0.3411764705882353" green="0.76862745098039209" blue="0.89803921568627454" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                <state key="normal" title="😱"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="eventButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LGX-jt-TCL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WL4-n9-8gA">
+                                                <rect key="frame" x="197" y="0.0" width="177" height="140"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.15294117647058825" blue="0.2196078431372549" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                <state key="normal" title="🔔"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="eventButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OfH-7p-Q2d"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9Qr-6x-BeH" secondAttribute="trailing" id="9ro-9s-rly"/>
+                                    <constraint firstAttribute="trailing" secondItem="Px0-8m-2Kr" secondAttribute="trailing" id="I5e-nB-O6f"/>
+                                    <constraint firstAttribute="height" constant="300" id="kKa-6E-TCb"/>
+                                </constraints>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-P5-709">
                                 <rect key="frame" x="20" y="820" width="374" height="22"/>
                                 <subviews>
@@ -61,16 +133,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f0J-P5-709" secondAttribute="trailing" constant="20" id="8gc-41-dXT"/>
-                            <constraint firstItem="xgP-IH-bnh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8t2-tR-HVz"/>
-                            <constraint firstItem="xgP-IH-bnh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FoY-Bh-ity"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f0J-P5-709" secondAttribute="bottom" constant="20" id="Mdl-TM-isN"/>
+                            <constraint firstItem="XSx-E1-k32" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qgu-qf-Re2"/>
                             <constraint firstItem="f0J-P5-709" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bSV-1i-tCP"/>
+                            <constraint firstItem="XSx-E1-k32" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="d0T-1g-Fbs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XSx-E1-k32" secondAttribute="trailing" constant="20" id="xUo-sQ-QBc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OR0-NC-3Fa"/>
+                    <navigationItem key="navigationItem" title="Editor Review Tones" id="OR0-NC-3Fa"/>
                     <connections>
+                        <outlet property="eventFourButtonLable" destination="WL4-n9-8gA" id="VLQ-bA-cKi"/>
                         <outlet property="eventOneButtonLable" destination="xgP-IH-bnh" id="wYc-AI-Gza"/>
+                        <outlet property="eventThreeButtonLable" destination="isv-iT-x0E" id="LMO-oz-ZkW"/>
+                        <outlet property="eventTwoButtonLable" destination="NlT-aV-mrP" id="ky1-Mu-iUl"/>
                         <outlet property="listButtonLabel" destination="QIx-zf-dFR" id="Unv-lT-CkK"/>
                         <outlet property="micButtonLabel" destination="xj1-T5-5vB" id="mYj-DN-fVt"/>
                         <outlet property="playButtonLabel" destination="WYY-5E-js2" id="6YE-V8-cXk"/>

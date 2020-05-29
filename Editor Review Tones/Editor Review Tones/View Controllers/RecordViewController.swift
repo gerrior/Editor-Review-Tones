@@ -28,6 +28,9 @@ class RecordViewController: UIViewController {
     @IBOutlet private weak var micButtonLabel: UIButton!
 
     @IBOutlet private weak var eventOneButtonLable: UIButton!
+    @IBOutlet private weak var eventTwoButtonLable: UIButton!
+    @IBOutlet private weak var eventThreeButtonLable: UIButton!
+    @IBOutlet private weak var eventFourButtonLable: UIButton!
 
     // MARK: - Actions
 
@@ -39,13 +42,13 @@ class RecordViewController: UIViewController {
         playRecording()
     }
 
-    @IBAction func eventOneButton(_ sender: Any) {
-        let eventName = eventOneButtonLable.titleLabel?.text ?? "Event 1"
+    @IBAction func eventButton(_ sender: UIButton) {
+        let eventName = sender.titleLabel?.text ?? "Unknown Event"
 
         if let clip = clip {
             clipController.create(eventWithName: eventName, clip: clip)
         } else {
-            print("Event 1: \(eventName) - No clip, throw bits on the floor.")
+            print("Event: \(eventName) - No clip, throw bits on the floor.")
         }
     }
 
