@@ -123,7 +123,7 @@ class ViewController: UIViewController {
     }
 
     func playRecording() {
-        var audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
 
 //        var path = Bundle.main.url(forResource: "wrong-number", withExtension: "mp3")!
 //        path = Bundle.main.url(forResource: "gong-sound", withExtension: "wav")!
