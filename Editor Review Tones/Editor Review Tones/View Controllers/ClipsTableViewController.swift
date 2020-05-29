@@ -95,17 +95,13 @@ class ClipsTableViewController: UITableViewController {
             print("Start Date: \(df.string(from: clip.startTimestamp!))")
             print("")
 
-            if let events = clip.events as? [Event]? {
-                if let events = events {
-                    if events.isEmpty {
-                        for event in events {
-                            print("\(event.name!) at \(df.string(from: event.timestamp!))")
-                        }
-                    } else {
-                        print("Empty. No events recorded for this clip")
+            if let events = clip.events?.allObjects as? [Event] {
+                if !events.isEmpty {
+                    for event in events {
+                        print("\(event.name!) at \(df.string(from: event.timestamp!))")
                     }
                 } else {
-                    print("No Event object. No events recorded for this clip")
+                    print("Empty. No events recorded for this clip")
                 }
             } else {
                 print("These are not the events records you are looking for")
