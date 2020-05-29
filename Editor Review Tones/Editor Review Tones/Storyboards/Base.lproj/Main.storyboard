@@ -20,7 +20,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <state key="normal" title="🤬"/>
                                 <connections>
-                                    <action selector="clipButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuN-r6-zXl"/>
+                                    <action selector="eventOneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuN-r6-zXl"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-P5-709">
@@ -70,6 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OR0-NC-3Fa"/>
                     <connections>
+                        <outlet property="eventOneButtonLable" destination="xgP-IH-bnh" id="wYc-AI-Gza"/>
                         <outlet property="listButtonLabel" destination="QIx-zf-dFR" id="Unv-lT-CkK"/>
                         <outlet property="micButtonLabel" destination="xj1-T5-5vB" id="mYj-DN-fVt"/>
                         <outlet property="playButtonLabel" destination="WYY-5E-js2" id="6YE-V8-cXk"/>

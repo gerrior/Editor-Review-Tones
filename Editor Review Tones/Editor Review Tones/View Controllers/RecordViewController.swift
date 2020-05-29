@@ -11,15 +11,25 @@ import AVFoundation
 
 class RecordViewController: UIViewController {
 
-    // MARK: Properties
+    // MARK: - Properites
 
     let clipController = ClipController()
     var clip: Clip?
+
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
+    var audioPlayer: AVAudioPlayer?
+
+    // MARK: - Outlets
 
     @IBOutlet private weak var listButtonLabel: UIButton!
     @IBOutlet private weak var recordButtonLabel: UIButton!
     @IBOutlet private weak var playButtonLabel: UIButton!
     @IBOutlet private weak var micButtonLabel: UIButton!
+
+    @IBOutlet private weak var eventOneButtonLable: UIButton!
+
+    // MARK: - Actions
 
     @IBAction func recordButtonAction(_ sender: Any) {
         recordTapped()
@@ -29,13 +39,17 @@ class RecordViewController: UIViewController {
         playRecording()
     }
 
-    @IBAction func clipButton(_ sender: Any) {
-        print("Timestamp")
+    @IBAction func eventOneButton(_ sender: Any) {
+        let eventName = eventOneButtonLable.titleLabel?.text ?? "Event 1"
+
+        if let clip = clip {
+            clipController.create(eventWithName: eventName, clip: clip)
+        } else {
+            print("Event 1: \(eventName) - No clip, throw bits on the floor.")
+        }
     }
 
-    var recordingSession: AVAudioSession!
-    var audioRecorder: AVAudioRecorder!
-    var audioPlayer: AVAudioPlayer?
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +80,9 @@ class RecordViewController: UIViewController {
         }
     }
 
-    func loadRecordingUI() {
+    // MARK: - Private
+
+    private func loadRecordingUI() {
         // List Button: Increase size
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 24, weight: .regular, scale: .large)
         var largeImage = UIImage(systemName: "list.bullet", withConfiguration: largeConfig)
@@ -97,14 +113,15 @@ class RecordViewController: UIViewController {
 
         // Mic button initially disabled
         micButtonLabel.isEnabled = false
+        micButtonLabel.isHidden = true // TODO: Not needed at the moment so hiding
     }
 
-    func getDocumentsDirectory() -> URL {
+    private func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
 
-    func startRecording() {
+    private func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
 
         let settings = [
@@ -123,7 +140,7 @@ class RecordViewController: UIViewController {
         }
     }
 
-    func playRecording() {
+    private func playRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
 
 //        var path = Bundle.main.url(forResource: "wrong-number", withExtension: "mp3")!
