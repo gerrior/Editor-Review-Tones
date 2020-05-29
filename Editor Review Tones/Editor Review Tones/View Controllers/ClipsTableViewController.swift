@@ -24,7 +24,9 @@ class ClipsTableViewController: UITableViewController {
     // MARK: - Actions
 
     @IBAction func shareButton(_ sender: Any) {
-        outputEvents()
+        if let indexPath = tableView.indexPathForSelectedRow {
+            outputEvents(row: indexPath.row)
+        }
     }
 
     // MARK: - View Lifecycle
@@ -83,10 +85,8 @@ class ClipsTableViewController: UITableViewController {
 
     // MARK: - Private
 
-    private func outputEvents() {
-        guard let clipController = clipController else { return }
-
-        if let clip = clipController.clips.last {
+    private func outputEvents(row index: Int) {
+        if let clip = clipController?.clips[index] {
             let df = DateFormatter()
             df.dateStyle = .short
             df.timeStyle = .short
