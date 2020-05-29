@@ -10,7 +10,7 @@ import UIKit
 
 class ClipsTableViewController: UITableViewController {
 
-    // MARK: Properties
+    // MARK: - Properites
 
     var clipController: ClipController?
     var clip: Clip? {
@@ -18,6 +18,16 @@ class ClipsTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+
+    // MARK: - Outlets
+
+    // MARK: - Actions
+
+    @IBAction func shareButton(_ sender: Any) {
+        outputEvents()
+    }
+
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,4 +80,36 @@ class ClipsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    // MARK: - Private
+
+    private func outputEvents() {
+        guard let clipController = clipController else { return }
+
+        if let clip = clipController.clips.last {
+            let df = DateFormatter()
+            df.dateStyle = .short
+            df.timeStyle = .short
+
+            print("Report For: \(clip.title!)")
+            print("Start Date: \(df.string(from: clip.startTimestamp!))")
+            print("")
+
+            if let events = clip.events as? [Event]? {
+                if let events = events {
+                    if events.isEmpty {
+                        for event in events {
+                            print("\(event.name!) at \(df.string(from: event.timestamp!))")
+                        }
+                    } else {
+                        print("Empty. No events recorded for this clip")
+                    }
+                } else {
+                    print("No Event object. No events recorded for this clip")
+                }
+            } else {
+                print("These are not the events records you are looking for")
+            }
+        }
+    }
 }

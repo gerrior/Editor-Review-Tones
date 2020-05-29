@@ -181,10 +181,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="9O4-PA-D2f">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="action" id="jFa-tm-DFe"/>
-                            <barButtonItem systemItem="trash" id="c3a-BL-Jf9"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="jFa-tm-DFe">
+                            <connections>
+                                <action selector="shareButton:" destination="3Wa-ai-lYl" id="SoY-jz-lD6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6u-54-uQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
