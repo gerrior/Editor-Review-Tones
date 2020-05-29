@@ -35,8 +35,7 @@ class ClipController {
 
     func create(clipWithTitle title: String,
                 startTimestamp: Date?,
-                audioFile: URL?,
-                events: Event) {
+                audioFile: URL?) {
 
         var datetime = Date()
         if startTimestamp != nil {

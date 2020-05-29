@@ -39,6 +39,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("Location of *.sqlite database:")
+        print(NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).last! as String)
+
+        print("Location of audio clips:")
         print(getDocumentsDirectory().absoluteString)
 
         recordingSession = AVAudioSession.sharedInstance()
@@ -140,6 +144,14 @@ class ViewController: UIViewController {
 
     @objc func recordTapped() {
         if audioRecorder == nil {
+            let now = Date()
+            let df = DateFormatter()
+            df.dateStyle = .short
+            df.timeStyle = .short
+            let date = df.string(from: now)
+
+            clipController.create(clipWithTitle: "Clip from \(date)", startTimestamp: now, audioFile: nil)
+
             recordButtonLabel.isSelected = true
             startRecording()
         } else {
