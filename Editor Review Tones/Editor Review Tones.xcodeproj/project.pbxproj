@@ -11,7 +11,7 @@
 		0E9CA3A05DA74E2ECEE8E36E /* Pods_Editor_Review_Tones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4B1331AB345D1B3EE71DB1 /* Pods_Editor_Review_Tones.framework */; };
 		92A0DA52247DD87E00ABF6F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DA51247DD87E00ABF6F8 /* AppDelegate.swift */; };
 		92A0DA54247DD87E00ABF6F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DA53247DD87E00ABF6F8 /* SceneDelegate.swift */; };
-		92A0DA56247DD87E00ABF6F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DA55247DD87E00ABF6F8 /* ViewController.swift */; };
+		92A0DA56247DD87E00ABF6F8 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DA55247DD87E00ABF6F8 /* RecordViewController.swift */; };
 		92A0DA59247DD87E00ABF6F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA57247DD87E00ABF6F8 /* Main.storyboard */; };
 		92A0DA5B247DD88300ABF6F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA5A247DD88300ABF6F8 /* Assets.xcassets */; };
 		92A0DA5E247DD88300ABF6F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A0DA5C247DD88300ABF6F8 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 		92A0DAA22480471300ABF6F8 /* Clip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA12480471300ABF6F8 /* Clip+Convenience.swift */; };
 		92A0DAA42480481D00ABF6F8 /* ClipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA32480481D00ABF6F8 /* ClipController.swift */; };
 		92A0DAA624804E5200ABF6F8 /* Event+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA524804E5200ABF6F8 /* Event+Convenience.swift */; };
-		92A0DAA92480720F00ABF6F8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA82480720F00ABF6F8 /* TableViewController.swift */; };
+		92A0DAA92480720F00ABF6F8 /* ClipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0DAA82480720F00ABF6F8 /* ClipsTableViewController.swift */; };
 		D4792627ED589EA817012B4F /* Pods_Editor_Review_TonesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3FE967D489FFEF42A2377C /* Pods_Editor_Review_TonesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +59,7 @@
 		92A0DA4E247DD87E00ABF6F8 /* Review Tones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Review Tones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A0DA51247DD87E00ABF6F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A0DA53247DD87E00ABF6F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92A0DA55247DD87E00ABF6F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92A0DA55247DD87E00ABF6F8 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		92A0DA58247DD87E00ABF6F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92A0DA5A247DD88300ABF6F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92A0DA5D247DD88300ABF6F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		92A0DAA12480471300ABF6F8 /* Clip+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clip+Convenience.swift"; sourceTree = "<group>"; };
 		92A0DAA32480481D00ABF6F8 /* ClipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipController.swift; sourceTree = "<group>"; };
 		92A0DAA524804E5200ABF6F8 /* Event+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+Convenience.swift"; sourceTree = "<group>"; };
-		92A0DAA82480720F00ABF6F8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		92A0DAA82480720F00ABF6F8 /* ClipsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsTableViewController.swift; sourceTree = "<group>"; };
 		AC3F5827391ABD181A55AF48 /* Pods-Editor Review Tones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor Review Tones.release.xcconfig"; path = "Target Support Files/Pods-Editor Review Tones/Pods-Editor Review Tones.release.xcconfig"; sourceTree = "<group>"; };
 		BBCD68F7BE5C4929F4375C81 /* Pods-Editor Review TonesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor Review TonesTests.release.xcconfig"; path = "Target Support Files/Pods-Editor Review TonesTests/Pods-Editor Review TonesTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF3FE967D489FFEF42A2377C /* Pods_Editor_Review_TonesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Editor_Review_TonesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,8 +225,8 @@
 		92A0DAAA2480721600ABF6F8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				92A0DAA82480720F00ABF6F8 /* TableViewController.swift */,
-				92A0DA55247DD87E00ABF6F8 /* ViewController.swift */,
+				92A0DAA82480720F00ABF6F8 /* ClipsTableViewController.swift */,
+				92A0DA55247DD87E00ABF6F8 /* RecordViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -472,13 +472,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A0DA9B24803C7400ABF6F8 /* CoreDataStack.swift in Sources */,
-				92A0DA56247DD87E00ABF6F8 /* ViewController.swift in Sources */,
+				92A0DA56247DD87E00ABF6F8 /* RecordViewController.swift in Sources */,
 				92A0DAA42480481D00ABF6F8 /* ClipController.swift in Sources */,
 				92A0DA52247DD87E00ABF6F8 /* AppDelegate.swift in Sources */,
 				92A0DAA624804E5200ABF6F8 /* Event+Convenience.swift in Sources */,
 				92A0DA54247DD87E00ABF6F8 /* SceneDelegate.swift in Sources */,
 				92A0DA9E248044C000ABF6F8 /* Clip.xcdatamodeld in Sources */,
-				92A0DAA92480720F00ABF6F8 /* TableViewController.swift in Sources */,
+				92A0DAA92480720F00ABF6F8 /* ClipsTableViewController.swift in Sources */,
 				92A0DAA22480471300ABF6F8 /* Clip+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

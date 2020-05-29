@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  ClipsTableViewController.swift
 //  Editor Review Tones
 //
 //  Created by Mark Gerrior on 5/28/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class ClipsTableViewController: UITableViewController {
 
     // MARK: Properties
 
